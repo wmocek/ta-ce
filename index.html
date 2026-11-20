@@ -405,8 +405,9 @@
 
   <!-- QUIZ -->
   <section class="step" id="quiz">
-    <span class="tag">FINAŁ · 2 min</span>
+    <span class="tag">FINAŁ · 3 min</span>
     <h2>🏆 Quiz – sprawdź się!</h2>
+    <p class="small">Za każdym razem losuje się 12 innych pytań – możesz grać wiele razy!</p>
     <div class="quiz" id="quizbox"></div>
   </section>
 </div>
@@ -509,16 +510,54 @@ const Q=[
  ["Walc liczymy…", ["na 2: RAZ-dwa","na 3: RAZ-dwa-trzy","na 4: raz-dwa-trzy-cztery"],1,"Walc zawsze na 3, z mocnym RAZ 🎡"],
  ["Rodzina słynna z komponowania walców to…", ["Chopinowie","Straussowie","Bachowie"],1,"Wiedeńska rodzina Straussów (czytaj: sztrausów)."],
  ["Marsz pochodzi z…", ["Niemiec","Austrii","Czech","Polski"],0,"Marsz – z Niemiec. Parady, śluby, pogrzeby 🥁"],
- ["Menuet to taniec…", ["starofrancuski, dworski","czeski, szybki","polski, z przytupami"],0,"Menuet – Francja, XVII wiek, pałace 🎩"]
+ ["Menuet to taniec…", ["starofrancuski, dworski","czeski, szybki","polski, z przytupami"],0,"Menuet – Francja, XVII wiek, pałace 🎩"],
+ ["Co to jest metrum?", ["na ile liczymy takt, np. na 2 albo na 3","jak głośno gra muzyka","jak nazywa się kompozytor"],0,"Metrum mówi, na ile liczymy: raz-dwa albo raz-dwa-trzy 🔢"],
+ ["Co to jest tempo?", ["jak szybko gra muzyka","jak wysoko śpiewamy","ile jest instrumentów"],0,"Tempo – szybko albo wolno ⏱️"],
+ ["Co to jest rytm?", ["układ długich i krótkich dźwięków","nazwa instrumentu","wysokość dźwięku"],0,"Rytm to długie i krótkie dźwięki – „podpis” tańca 🥁"],
+ ["Ile jest polskich tańców narodowych (według str. 39 podręcznika)?", ["3","5","8","10"],1,"Pięć: polonez, krakowiak, mazur, kujawiak, oberek."],
+ ["Który z tych tańców NIE jest polskim tańcem narodowym?", ["krakowiak","walc","polonez","kujawiak"],1,"Walc pochodzi z Austrii 🎡"],
+ ["Który z tych tańców NIE jest polskim tańcem narodowym?", ["mazur","oberek","menuet","polonez"],2,"Menuet jest francuski 🎩"],
+ ["Skąd pochodzi krakowiak?", ["z Małopolski","z Kujaw","z Mazowsza","z Austrii"],0,"Krakowiak – Kraków, czyli Małopolska 🏰"],
+ ["Skąd pochodzi mazur?", ["z Mazowsza","z Małopolski","z Kujaw","z Niemiec"],0,"Mazur – Mazowsze 🌀"],
+ ["Skąd pochodzi oberek?", ["z Mazowsza","z Czech","z Francji","z Kujaw"],0,"Oberek, tak jak mazur, jest z Mazowsza."],
+ ["Podstawowy krok krakowiaka przypomina…", ["cwałowanie konia","skakanie żaby","chodzenie na palcach"],0,"Krakowiak = koń w cwale 🐎"],
+ ["Jaki rytm ma krakowiak?", ["synkopowany","zawsze równy i wolny","bez akcentów"],0,"Synkopa – akcent tam, gdzie się go nie spodziewasz!"],
+ ["W jakim tempie tańczy się poloneza?", ["spokojnym","bardzo szybkim","raz szybko, raz wolno"],0,"Polonez jest spokojny i uroczysty 👑"],
+ ["Czy w polonezie są skoki i obroty?", ["nie, idzie się krokiem","tak, dużo skoków","tak, same obroty"],0,"Polonez to taniec „chodzony” – bez skoków i obrotów."],
+ ["Najsłynniejsze polonezy napisał…", ["Fryderyk Chopin","Stanisław Moniuszko","Jan Strauss"],0,"Polonezy pisali też Bach i Beethoven, ale najsłynniejsze są Chopina."],
+ ["Mazur ma charakterystyczne…", ["przytupy i akcenty na słabych częściach taktu","półobroty w parach","ukłony i peruki"],0,"Mazur – rytmy punktowane i przytupy 👢"],
+ ["W jakich operach Moniuszki są słynne mazury?", ["„Halka” i „Straszny dwór”","„Sprzedana narzeczona”","„Miłość do trzech pomarańczy”"],0,"„Halka” i „Straszny dwór” – opery Moniuszki."],
+ ["W jakiej tonacji najczęściej pisze się kujawiaka?", ["molowej (smutnej)","durowej (wesołej)","nie ma tonacji"],0,"Kujawiak jest smętny – zwykle w molu 🌙"],
+ ["Z jakim tańcem kujawiak często przeplata się na zabawie?", ["z oberkiem","z menuetem","z marszem"],0,"Wolny kujawiak, potem szybki oberek!"],
+ ["Czym oberek różni się od mazura?", ["jest dużo szybszy","jest wolniejszy","liczy się go na 2"],0,"Rytm podobny do mazura, ale tempo znacznie szybsze 🌪️"],
+ ["Mazurek najczęściej ma budowę…", ["A B A – trzy części","jedną część","dziesięć części"],0,"Trzyczęściowa – środkowa część jest inna."],
+ ["Polka jest tańczona…", ["parami w półobrotach","w szeregu, krokiem","w pojedynkę, w kółku"],0,"Polka – pary w półobrotach 🦘"],
+ ["Nazwa „polka” pochodzi od…", ["słowa „pulka” – półkrok","Polski","imienia tancerki"],0,"Ciekawostka: „pulka” to półkrok!"],
+ ["Kto napisał polkę do opery „Sprzedana narzeczona”?", ["Bedřich Smetana","Fryderyk Chopin","Sergiusz Prokofiew"],0,"Czech Bedřich (czytaj: bedrszich) Smetana."],
+ ["Od jakiego tańca pochodzi walc?", ["od austriackiego lendlera","od polskiego mazura","od francuskiego menueta"],0,"Walc wywodzi się prawdopodobnie z lendlera 🇦🇹"],
+ ["Szybka odmiana walca to walc…", ["wiedeński","angielski","krakowski"],0,"Walc wiedeński jest szybki, angielski – wolny."],
+ ["Na którą część taktu w walcu pada akcent?", ["na pierwszą – RAZ","na drugą","na trzecią"],0,"RAZ-dwa-trzy – mocna pierwsza część taktu."],
+ ["Walc z „Symfonii fantastycznej” napisał…", ["Hektor Berlioz","Jan Strauss","Feliks Mendelssohn"],0,"Hektor Berlioz – walc stylizowany."],
+ ["Kto napisał słynny „Marsz weselny”?", ["Feliks Mendelssohn","Fryderyk Chopin","Ludomir Różycki"],0,"Mendelssohn (czytaj: mendelson) 💍"],
+ ["Kto napisał słynny „Marsz żałobny”?", ["Fryderyk Chopin","Feliks Mendelssohn","Bedřich Smetana"],0,"„Marsz żałobny” jest Chopina."],
+ ["Marsz z opery „Miłość do trzech pomarańczy” ma charakter…", ["żartobliwy","smutny","senny"],0,"Prokofiew napisał żartobliwy marsz 🍊"],
+ ["Kiedy gra się marsze?", ["na paradach, ślubach i pogrzebach","tylko do snu","tylko na dyskotece"],0,"Marsze towarzyszą paradom i uroczystościom 🥁"],
+ ["W którym wieku menuet tańczono już we francuskich salonach?", ["w XVII wieku","w XX wieku","w XXI wieku"],0,"Menuet – już w XVII wieku 🎩"],
+ ["Menuet w XVIII wieku był częścią…", ["symfonii i sonaty","hymnu narodowego","opery „Halka”"],0,"Menuet był jedną z części symfonii i sonaty."],
+ ["Kto napisał krakowiaka do baletu „Pan Twardowski”?", ["Ludomir Różycki","Stanisław Moniuszko","Hektor Berlioz"],0,"Ludomir Różycki – „Pan Twardowski”."],
+ ["Taniec, który przyszedł ze wsi na dwory i do pałaców, to…", ["taniec dworski (dawny)","taniec komputerowy","taniec sportowy"],0,"Dawne tańce miały ludowe pochodzenie, potem trafiły na dwory."],
+ ["Które dwa tańce liczymy na 2?", ["krakowiak i polka","walc i menuet","mazur i oberek"],0,"Krakowiak i polka – raz-dwa!"]
 ];
-let qi=0, score=0;
+const QUIZ_LEN=12;
+let QS=[], qi=0, score=0;
+function newQuiz(){ QS=shuffle(Q).slice(0,QUIZ_LEN); qi=0; score=0; showQ(); }
 const box=document.getElementById('quizbox');
 function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);}
 function showQ(){
-  const [q,opts,ok,expl]=Q[qi];
+  const [q,opts,ok,expl]=QS[qi];
   const order=shuffle(opts.map((t,i)=>i));
-  box.innerHTML=`<div class="qhead"><span>Pytanie ${qi+1} z ${Q.length}</span><span>⭐ ${score}</span></div>
-    <div class="progress"><i style="width:${qi/Q.length*100}%"></i></div>
+  box.innerHTML=`<div class="qhead"><span>Pytanie ${qi+1} z ${QS.length}</span><span>⭐ ${score}</span></div>
+    <div class="progress"><i style="width:${qi/QS.length*100}%"></i></div>
     <div class="qtext">${q}</div><div class="opts"></div><div class="feedback"></div><div class="qnav"></div>`;
   const oc=box.querySelector('.opts');
   order.forEach(i=>{
@@ -530,23 +569,23 @@ function showQ(){
       else{b.classList.add('bad'); [...oc.children].find(x=>x.textContent===opts[ok]).classList.add('good'); fb.innerHTML='🙈 Nie tym razem. '+expl;}
       box.querySelector('.qhead span:last-child').textContent='⭐ '+score;
       const n=document.createElement('button'); n.className='btn';
-      n.textContent= qi<Q.length-1 ? 'Dalej →' : 'Zobacz wynik 🏆';
-      n.onclick=()=>{qi++; qi<Q.length?showQ():showResult();};
+      n.textContent= qi<QS.length-1 ? 'Dalej →' : 'Zobacz wynik 🏆';
+      n.onclick=()=>{qi++; qi<QS.length?showQ():showResult();};
       box.querySelector('.qnav').appendChild(n);
     };
     oc.appendChild(b);
   });
 }
 function showResult(){
-  const pct=score/Q.length;
+  const pct=score/QS.length;
   const stars = pct===1?'⭐⭐⭐':pct>=.7?'⭐⭐☆':pct>=.4?'⭐☆☆':'☆☆☆';
   const msg = pct===1?'Mistrz tańca! Wszystko bezbłędnie! 🏆':pct>=.7?'Super! Prawie wszystko umiesz 💪':pct>=.4?'Nieźle! Zajrzyj jeszcze do ściągi i spróbuj ponownie.':'Przeczytaj jeszcze raz karty tańców i spróbuj znowu – dasz radę!';
-  box.innerHTML=`<div class="result"><div class="stars">${stars}</div><div class="score">${score} / ${Q.length}</div><p style="font-size:20px;font-weight:800">${msg}</p>
-  <button class="btn" style="background:var(--violet);color:#fff" id="again">Jeszcze raz 🔁</button>
+  box.innerHTML=`<div class="result"><div class="stars">${stars}</div><div class="score">${score} / ${QS.length}</div><p style="font-size:20px;font-weight:800">${msg}</p>
+  <button class="btn" style="background:var(--violet);color:#fff" id="again">Nowy quiz 🔁</button>
   <a class="btn" href="#s6" style="margin-left:6px">Ściąga 📋</a></div>`;
-  document.getElementById('again').onclick=()=>{qi=0;score=0;showQ();};
+  document.getElementById('again').onclick=()=>newQuiz();
 }
-showQ();
+newQuiz();
 </script>
 </body>
 </html>
